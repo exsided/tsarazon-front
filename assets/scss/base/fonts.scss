@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-Italic.eot');
+    src: local('Open Sans Italic'), local('OpenSans-Italic'),
+        url('~/assets/fonts/OpenSans/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-Italic.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-Italic.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-Regular.eot');
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+        url('~/assets/fonts/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-Regular.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-Regular.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-BoldItalic.eot');
+    src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'),
+        url('~/assets/fonts/OpenSans/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-BoldItalic.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-SemiBold.eot');
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBold.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBold.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-ExtraBoldItalic.eot');
+    src: local('Open Sans ExtraBold Italic'), local('OpenSans-ExtraBoldItalic'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBoldItalic.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBoldItalic.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-LightItalic.eot');
+    src: local('Open Sans Light Italic'), local('OpenSans-LightItalic'),
+        url('~/assets/fonts/OpenSans/OpenSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-LightItalic.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-LightItalic.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-Bold.eot');
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('~/assets/fonts/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-Bold.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-SemiBoldItalic.eot');
+    src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBoldItalic.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBoldItalic.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-ExtraBold.eot');
+    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBold.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBold.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~/assets/fonts/OpenSans/OpenSans-Light.eot');
+    src: local('Open Sans Light'), local('OpenSans-Light'),
+        url('~/assets/fonts/OpenSans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/OpenSans/OpenSans-Light.woff2') format('woff2'),
+        url('~/assets/fonts/OpenSans/OpenSans-Light.woff') format('woff'),
+        url('~/assets/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-Bold.eot');
+    src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Bold.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Bold.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-Italic.eot');
+    src: local('Ubuntu Italic'), local('Ubuntu-Italic'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Italic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Italic.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Italic.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-Regular.eot');
+    src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Regular.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Regular.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-BoldItalic.eot');
+    src: local('Ubuntu Bold Italic'), local('Ubuntu-BoldItalic'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-BoldItalic.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-BoldItalic.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-Medium.eot');
+    src: local('Ubuntu Medium'), local('Ubuntu-Medium'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Medium.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Medium.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Medium.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-MediumItalic.eot');
+    src: local('Ubuntu Medium Italic'), local('Ubuntu-MediumItalic'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-MediumItalic.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-MediumItalic.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-Light.eot');
+    src: local('Ubuntu Light'), local('Ubuntu-Light'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Light.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Light.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('~/assets/fonts/Ubuntu/Ubuntu-LightItalic.eot');
+    src: local('Ubuntu Light Italic'), local('Ubuntu-LightItalic'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-LightItalic.woff2') format('woff2'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-LightItalic.woff') format('woff'),
+        url('~/assets/fonts/Ubuntu/Ubuntu-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+

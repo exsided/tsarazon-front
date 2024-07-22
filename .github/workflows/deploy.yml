@@ -1,0 +1,75 @@
+name: Deploy to preprod
+on:
+  push:
+    tags: [ v* ]
+
+env:
+  REGISTRY: ${{ secrets.REGISTRY }}
+  OCR_USER: ${{ secrets.OCR_USER }}
+  OCR_PASSWORD: ${{ secrets.OCR_PASSWORD }}
+  IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
+  CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
+  APP_PORT: ${{ secrets.APP_PORT }}
+  HOST: ${{ secrets.DEV_HOST }}
+  USER: ${{ secrets.DEV_USER }}
+  PORT: ${{ secrets.DEV_PORT }}
+  FOLDER: ${{ secrets.DEV_FOLDER }}
+  SSH_KEY: ${{ secrets.DEV_SSH_PRIVATE_KEY }}
+  API: ${{ secrets.PREPROD_API }}
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+
+    steps:
+      - id: version
+        run: |
+          RELEASE_VERSION=${GITHUB_REF#refs/*/}
+          RELEASE_VERSION=${RELEASE_VERSION//v}
+          echo "version=${RELEASE_VERSION}" >> $GITHUB_OUTPUT
+
+  build:
+    needs: version
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - run: echo 'Login to OCR'
+      - run: echo '${{ env.OCR_PASSWORD }}' | docker login  --username ${{ env.OCR_USER }} --password-stdin ${{ env.REGISTRY }}
+      - run: docker build --build-arg VUE_APP_ENDPOINT=${{ env.API }} -t ${{ env.IMAGE_NAME }} .
+      - run: docker tag ${{ env.IMAGE_NAME }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.version.outputs.version }}
+      - run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.version.outputs.version }}
+
+  deploy:
+    needs: [version, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fifsky/ssh-action@master
+        with:
+          command: |
+            echo 'Login to OCR'
+            echo '${{ env.OCR_PASSWORD }}' | docker login  --username ${{ env.OCR_USER }} --password-stdin ${{ env.REGISTRY }}
+            docker stop ${{ env.CONTAINER_NAME }}
+            docker rm ${{ env.CONTAINER_NAME }}
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.version.outputs.version }}
+            docker run -d -p ${{ env.APP_PORT }}:3000 \
+              -e VUE_APP_ENDPOINT=${{ env.API }} \
+              --restart always \
+              --name ${{ env.CONTAINER_NAME }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.version.outputs.version }}
+          host: ${{ env.HOST }}
+          user: ${{ env.USER }}
+          port: ${{ env.PORT }}
+          key: ${{ env.SSH_KEY }}
+          args: "-tt -vvv"

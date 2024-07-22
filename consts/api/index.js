@@ -1,0 +1,13 @@
+export { default as CART_URLS } from '~/consts/api/cart';
+export { default as FAVORITES_URLS } from '~/consts/api/favorites';
+export { default as USER_URLS } from '~/consts/api/user';
+export { default as SLK_URLS } from '~/consts/api/slk';
+export { default as CITIES_URLS } from '~/consts/api/cities';
+export { default as CATALOG_URLS } from '~/consts/api/catalog';
+export { default as FILES_URLS } from '~/consts/api/files';
+export { default as FORMS_URLS } from '~/consts/api/forms';
+export { default as DOCUMENTS_URLS } from '~/consts/api/documents';
+export { default as FAQ_URLS } from '~/consts/api/faq';
+export { default as NEWS_URLS } from '~/consts/api/news';
+export { default as BRANDS_URLS } from '~/consts/api/brands';
+export { default as ORDERS_URLS } from '~/consts/api/orders';

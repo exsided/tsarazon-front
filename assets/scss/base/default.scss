@@ -1,0 +1,69 @@
+.container
+{
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include mq($tablet)
+	{
+		padding: 0 20px;
+	}
+
+	@include mq($wd)
+	{
+		padding: 0 70px;
+	}
+
+	@include mq($fullhd)
+	{
+		padding: 0 270px;
+ 	}
+}
+
+html, body
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	min-width: 320px;
+	min-height: 100vh;
+	overflow-y: scroll;
+	margin: 0;
+}
+
+.layout
+{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding-top: 159px;
+}
+
+.main
+{
+	flex: 1 0 auto;
+}
+
+*
+{
+	box-sizing: border-box;
+}
+
+.disable-scroll
+{
+	width: calc(100% - 0px);
+	overflow: hidden;
+
+	body { overflow: hidden; }
+}
+
+@include mq($wd)
+{
+	.layout
+	{
+		padding-top: 172px;
+	}
+}

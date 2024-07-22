@@ -1,0 +1,9 @@
+export { useMainStore } from './main';
+export { useCartStore } from './cart';
+export { useFavoritesStore } from './favorites';
+export { usePopupsStore } from './popups';
+export { useUserStore } from './user';
+export { useSlkStore } from './slk';
+export { useCitiesStore } from './cities';
+export { useCatalogStore } from './catalog';
+export { useFaqStore } from './faq';

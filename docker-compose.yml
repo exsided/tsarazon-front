@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    image: ${APP_IMAGE}
+    container_name: ${APP_NAME}
+    volumes:
+      - '${APP_DIR}:/srv'
+    ports:
+      - '${APP_PORT}:3000'
+    restart: 'always'
+    working_dir: ${APP_WORKING_DIR}

@@ -1,0 +1,131 @@
+.button
+{
+	white-space: nowrap;
+	cursor: pointer;
+
+	&:focus { outline: unset; }
+	&:disabled { cursor: not-allowed; }
+
+	&--white
+	{
+		color: $blue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 30px;
+		width: 100%;
+		background: #ffffff;
+		border: none;
+		border-radius: 10px;
+		height: 38px;
+		@include transition();
+
+		@include hover()
+		{
+			opacity: .8;
+		}
+
+		&:active { transform: scale(0.95); }
+	}
+
+	&--blue
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 30px;
+		height: 38px;
+		width: 100%;
+		width: fit-content;
+		background: #3772FE;
+		border-radius: 10px;
+		border: unset;
+		color: $white;
+		@include transition();
+
+		@include hover()
+		{
+			opacity: .8;
+		}
+
+		&:active { transform: scale(0.95); }
+	}
+
+	&--light-blue
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 9px 30px;
+		width: 100%;
+		width: fit-content;
+		background-color: $lblue;
+		border-radius: 10px;
+		border: unset;
+		color: $blue;
+		@include transition();
+
+		@include hover()
+		{
+			opacity: .8;
+		}
+
+		&:active { transform: scale(0.95); }
+	}
+
+	&--grey
+	{
+		padding: 10px 20px;
+		font-size: 14px;
+		line-height: 19px;
+		font-weight: 600;
+		border: none;
+		border-radius: 10px;
+		background: #F4F5F7;
+		@include transition();
+
+		@include hover()
+		{
+			opacity: .8;
+		}
+
+		&:active { transform: scale(0.95); }
+	}
+
+	&--box-shadow
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		color: #868799;
+		background-color: #FFFFFF;
+		box-shadow: 0px 0px 14px rgba(33, 33, 53, 0.1);
+		border-radius: 20px;
+		padding: 0 23px;
+		border: unset;
+		height: 40px;
+		@include transition();
+
+		@include hover()
+		{
+			color: $blue;
+		}
+
+		&:active { transform: scale(0.95); }
+	}
+
+	.--more-btn
+	{
+		padding: 10px 20px;
+		color: #2C2C2C;
+		font-size: 14px;
+		line-height: 19px;
+		font-weight: 600;
+		border: none;
+		border-radius: 10px;
+		background: #F4F5F7;
+	}
+}
